@@ -14,6 +14,7 @@ int main()
   float Area1;
   float PIB1;
   int NumeroDePontosTuristicos1;
+  float DensidadePopulacional1;
 
   // Atributos da Carta 2
   char Estado2;
@@ -23,6 +24,7 @@ int main()
   float Area2;
   float PIB2;
   int NumeroDePontosTuristicos2;
+  float DensidadePopulacional2;
 
   // Quebra de linha para facilitar a leitura no terminal
   printf("\n");
@@ -86,6 +88,10 @@ int main()
   // Quebra de linha para facilitar a leitura no terminal
   printf("\n");
 
+  // Densidade populacional: população dividida pela área (habitantes por km²)
+  DensidadePopulacional1 = (float)Populacao1 / Area1;
+  DensidadePopulacional2 = (float)Populacao2 / Area2;
+
   // Exibição dos Dados das Cartas:
   // Ajuda na compreensão do fluxo da aplicação
   printf("Cadastro concluído com sucesso! \n");
@@ -100,6 +106,7 @@ int main()
   printf("Área: %.2f km² \n", Area1);
   printf("PIB: %.2f bilhões de reais \n", PIB1);
   printf("Número de Pontos Turísticos: %i \n", NumeroDePontosTuristicos1);
+  printf("Densidade Populacional: %.2f hab/km² \n", DensidadePopulacional1);
 
   // Quebra de linha para facilitar a leitura no terminal
   printf("\n");
@@ -113,6 +120,7 @@ int main()
   printf("Área: %.2f km² \n", Area2);
   printf("PIB: %.2f bilhões de reais \n", PIB2);
   printf("Número de Pontos Turísticos: %i \n", NumeroDePontosTuristicos2);
+  printf("Densidade Populacional: %.2f hab/km² \n", DensidadePopulacional2);
 
   return 0;
 }
