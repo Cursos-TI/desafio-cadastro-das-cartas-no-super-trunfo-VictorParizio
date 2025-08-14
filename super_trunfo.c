@@ -53,6 +53,35 @@ int main()
   // Quebra de linha para facilitar a leitura no terminal
   printf("\n");
 
+  // Instruções para cadastro dos dados da Carta 2
+  printf("A seguir digite os dados da Carta 2\n");
+
+  printf("Digite a letra do Estado (A-H): \n");
+  scanf(" %c", &Estado2);
+
+  printf("Digite o Código da Carta (ex: A02): \n");
+  scanf("%3s", CodigoDaCarta2);
+
+  printf("Digite o Nome da Cidade: \n");
+  scanf(" %[^\n]", NomeDaCidade2); // Permite ler nomes compostos
+  // Lê todos os caracteres até o Enter, permitindo espaços no nome.
+  // O espaço antes de % ignora lixo no buffer.
+
+  printf("Digite o Número de Habitantes da cidade: \n");
+  scanf("%d", &Populacao2);
+
+  printf("Digite a Área da Cidade em quilômetros quadrados: \n");
+  scanf("%f", &Area2);
+
+  printf("Digite o Produto Interno Bruto da cidade: \n");
+  scanf("%f", &PIB2);
+
+  printf("Digite a quantidade de pontos turísticos na cidade: \n");
+  scanf("%d", &NumeroDePontosTuristicos2);
+
+  // Quebra de linha para facilitar a leitura no terminal
+  printf("\n");
+
   // Exibição dos Dados das Cartas:
   // Ajuda na compreensão do fluxo da aplicação
   printf("Cadastro concluído com sucesso! \n");
@@ -67,6 +96,19 @@ int main()
   printf("Área: %.2f km² \n", Area1);
   printf("PIB: %.2f bilhões de reais \n", PIB1);
   printf("Número de Pontos Turísticos: %i \n", NumeroDePontosTuristicos1);
+
+  // Quebra de linha para facilitar a leitura no terminal
+  printf("\n");
+
+  // Ficha da Carta 2
+  printf("Carta 2: \n");
+  printf("Estado: %c \n", Estado2);
+  printf("Código: %s \n", CodigoDaCarta2);
+  printf("Nome da Cidade: %s \n", NomeDaCidade2);
+  printf("População: %i habitantes \n", Populacao2);
+  printf("Área: %.2f km² \n", Area2);
+  printf("PIB: %.2f bilhões de reais \n", PIB2);
+  printf("Número de Pontos Turísticos: %i \n", NumeroDePontosTuristicos2);
 
   return 0;
 }
