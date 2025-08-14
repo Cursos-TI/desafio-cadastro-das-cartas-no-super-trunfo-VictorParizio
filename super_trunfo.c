@@ -1,12 +1,16 @@
 #include <stdio.h>
 
+// Define ponto único de mudança do valor da variável
+#define MAX_CIDADE 50
+
 int main()
 {
+
   // Atributos da Carta 1
   char Estado1;
   char CodigoDaCarta1[4];
-  char NomeDaCidade1[20];
-  int Populacao1;
+  char NomeDaCidade1[MAX_CIDADE];
+  unsigned long int Populacao1;
   float Area1;
   float PIB1;
   int NumeroDePontosTuristicos1;
@@ -14,8 +18,8 @@ int main()
   // Atributos da Carta 2
   char Estado2;
   char CodigoDaCarta2[4];
-  char NomeDaCidade2[20];
-  int Populacao2;
+  char NomeDaCidade2[MAX_CIDADE];
+  unsigned long int Populacao2;
   float Area2;
   float PIB2;
   int NumeroDePontosTuristicos2;
@@ -39,7 +43,7 @@ int main()
   // O espaço antes de % ignora lixo no buffer.
 
   printf("Digite o Número de Habitantes da cidade: \n");
-  scanf("%d", &Populacao1);
+  scanf("%lu", &Populacao1);
 
   printf("Digite a Área da Cidade em quilômetros quadrados: \n");
   scanf("%f", &Area1);
@@ -68,7 +72,7 @@ int main()
   // O espaço antes de % ignora lixo no buffer.
 
   printf("Digite o Número de Habitantes da cidade: \n");
-  scanf("%d", &Populacao2);
+  scanf("%lu", &Populacao2);
 
   printf("Digite a Área da Cidade em quilômetros quadrados: \n");
   scanf("%f", &Area2);
@@ -92,7 +96,7 @@ int main()
   printf("Estado: %c \n", Estado1);
   printf("Código: %s \n", CodigoDaCarta1);
   printf("Nome da Cidade: %s \n", NomeDaCidade1);
-  printf("População: %i habitantes \n", Populacao1);
+  printf("População: %lu habitantes \n", Populacao1);
   printf("Área: %.2f km² \n", Area1);
   printf("PIB: %.2f bilhões de reais \n", PIB1);
   printf("Número de Pontos Turísticos: %i \n", NumeroDePontosTuristicos1);
@@ -105,7 +109,7 @@ int main()
   printf("Estado: %c \n", Estado2);
   printf("Código: %s \n", CodigoDaCarta2);
   printf("Nome da Cidade: %s \n", NomeDaCidade2);
-  printf("População: %i habitantes \n", Populacao2);
+  printf("População: %lu habitantes \n", Populacao2);
   printf("Área: %.2f km² \n", Area2);
   printf("PIB: %.2f bilhões de reais \n", PIB2);
   printf("Número de Pontos Turísticos: %i \n", NumeroDePontosTuristicos2);
