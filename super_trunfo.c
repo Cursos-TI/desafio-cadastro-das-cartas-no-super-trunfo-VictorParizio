@@ -5,7 +5,6 @@
 
 int main()
 {
-
   // Atributos da Carta 1
   char Estado1;
   char CodigoDaCarta1[4];
@@ -124,10 +123,10 @@ int main()
   printf("Densidade Populacional: %.2f hab/km² \n", DensidadePopulacional1);
   printf("PIB per Capita: %.2f reais \n", PibPerCapita1);
   printf("Super Poder: %.2f \n", SuperPoder1);
-  
+
   // Quebra de linha para facilitar a leitura no terminal
   printf("\n");
-  
+
   // Ficha da Carta 2
   printf("Carta 2: \n");
   printf("Estado: %c \n", Estado2);
@@ -140,6 +139,29 @@ int main()
   printf("Densidade Populacional: %.2f hab/km² \n", DensidadePopulacional2);
   printf("PIB per Capita: %.2f reais \n", PibPerCapita2);
   printf("Super Poder: %.2f \n", SuperPoder2);
-  
+
+  // Quebra de linha para facilitar a leitura no terminal
+  printf("\n");
+
+  // Variáveis para armazenar os resultados das comparações
+  int ResultadoPopulacao = Populacao1 > Populacao2;
+  int ResultadoArea = Area1 > Area2;
+  int ResultadoPIB = PIB1 > PIB2;
+  int ResultadoPontosTuristicos = NumeroDePontosTuristicos1 > NumeroDePontosTuristicos2;
+  int ResultadoDensidadePopulacional = DensidadePopulacional1 < DensidadePopulacional2;
+  int ResultadoPIBperCapita = PibPerCapita1 > PibPerCapita2;
+  int ResultadoSuperPoder = SuperPoder1 > SuperPoder2;
+
+  // Batalha de Cartas
+  // Comparando os atributos das Cartas
+  printf("Comparação de Cartas: \n");
+  printf("População: Carta %d venceu (%d)\n", (2 - ResultadoPopulacao), ResultadoPopulacao);
+  printf("Área: Carta %d venceu (%d)\n", (2 - ResultadoArea), ResultadoArea);
+  printf("PIB: Carta %d venceu (%d)\n", (2 - ResultadoPIB), ResultadoPIB);
+  printf("Pontos Turísticos: Carta %d venceu (%d)\n", (2 - ResultadoPontosTuristicos), ResultadoPontosTuristicos);
+  printf("Densidade Populacional: Carta %d venceu (%d)\n", (2 - ResultadoDensidadePopulacional), ResultadoDensidadePopulacional);
+  printf("PIB per Capita: Carta %d venceu (%d)\n", (2 - ResultadoPIBperCapita), ResultadoPIBperCapita);
+  printf("Super Poder: Carta %d venceu (%d)\n", (2 - ResultadoSuperPoder), ResultadoSuperPoder);
+
   return 0;
 }
