@@ -16,6 +16,7 @@ int main()
   int NumeroDePontosTuristicos1;
   float DensidadePopulacional1;
   float PibPerCapita1;
+  float SuperPoder1;
 
   // Atributos da Carta 2
   char Estado2;
@@ -27,6 +28,7 @@ int main()
   int NumeroDePontosTuristicos2;
   float DensidadePopulacional2;
   float PibPerCapita2;
+  float SuperPoder2;
 
   // Quebra de linha para facilitar a leitura no terminal
   printf("\n");
@@ -99,6 +101,12 @@ int main()
   PibPerCapita1 = (PIB1 * 1e9) / Populacao1;
   PibPerCapita2 = (PIB2 * 1e9) / Populacao2;
 
+  // Calculo do Super Poder
+  // A densidade populacional está sendo calculada invertida para maximizar o "poder"
+  SuperPoder1 = (float)Populacao1 + Area1 + PIB1 + NumeroDePontosTuristicos1 + PibPerCapita1 + ((float)Area1 / Populacao1);
+
+  SuperPoder2 = (float)Populacao2 + Area2 + PIB2 + NumeroDePontosTuristicos2 + PibPerCapita2 + ((float)Area2 / Populacao2);
+
   // Exibição dos Dados das Cartas:
   // Ajuda na compreensão do fluxo da aplicação
   printf("Cadastro concluído com sucesso! \n");
@@ -115,10 +123,11 @@ int main()
   printf("Número de Pontos Turísticos: %i \n", NumeroDePontosTuristicos1);
   printf("Densidade Populacional: %.2f hab/km² \n", DensidadePopulacional1);
   printf("PIB per Capita: %.2f reais \n", PibPerCapita1);
-
+  printf("Super Poder: %.2f \n", SuperPoder1);
+  
   // Quebra de linha para facilitar a leitura no terminal
   printf("\n");
-
+  
   // Ficha da Carta 2
   printf("Carta 2: \n");
   printf("Estado: %c \n", Estado2);
@@ -130,6 +139,7 @@ int main()
   printf("Número de Pontos Turísticos: %i \n", NumeroDePontosTuristicos2);
   printf("Densidade Populacional: %.2f hab/km² \n", DensidadePopulacional2);
   printf("PIB per Capita: %.2f reais \n", PibPerCapita2);
-
+  printf("Super Poder: %.2f \n", SuperPoder2);
+  
   return 0;
 }
